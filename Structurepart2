@@ -1,0 +1,150 @@
+Functions:
+Function is a block of code designed to perform a particular task (do something).
+Thus a function is executed when the something calls it.
+
+function listArrayItems(arr) {
+    // ... code to be added ...
+}
+Declare a listArrayItems function, and set it up to accept a single parameter, arr - which stands for an array.
+need to code a for loop to loop over an array.
+a for loop needs the following information: 
+ 1. the starting loop counter value as a temporary variable i 
+ 2. the exit condition (the maximum value of the loop counter variable i, above which the loop no longer runs) 
+ 3. how to update the value of i after each loop
+ 
+Here's the information I'll use in this function declaration: 
+1. The loop's starting counter will be 0. The reason for setting it to zero is due to the fact that arrays are also counted from zero. 
+This means that I'll have a one-to-one mapping of the current value of the i variable at any given time, corresponding to the same index position of any item in the arr array 2. 
+The for loop's exit condition is when the value of i is equal or greater than arr.length. 
+Since the arr.length counts the number of items in the array from one, and the array items are indexed from zero, this effectively means that as soon as i is equal to arr.length, the loop will finish and any other code after it will be run. 
+This practically means that the exit condition for this for loop will be i < arr.length returning false. 
+In other words, as long as i < arr.length is true, this for loop will continue to run. 3. To make sure that none of the items in the arr array are skipped, I have to increase the value of i by 1 after each loop.
+Now that I know exactly how my for loop should behave, I can add it to my listArrayItems() function
+code:
+-function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        // ... code pending here ...
+    }
+}
+
+-function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]) //display the array item where the index is euqal to i
+    }
+}
+-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'];
+listArrayItems(colors); //display all items in the array at once
+
+Update:
+//function that takes an array as input and display all items of this array
+function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        console.log(i, arr[i])
+    }
+}
+var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink'];
+listArrayItems(colors);
+
+Update:
+function listArrayItems(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == 'red') {
+            console.log(i*100, "tomato!")
+        } else {
+            console.log(i*100, arr[i])
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------
+Objects:
+Or to assigns a simple value to a variable.
+
+//creating an object with properties and their values
+var assistantManager = {
+    rangeTilesPerTurn: 3,
+    socialSkills: 30,
+    streetSmarts: 30,
+    health: 40,
+    specialAbility: "young and ambitious",
+    greeting: "Let's make some money"
+}
+1. Declaring a new variable and assigning an object literal to it - this: var assistantManager = {} 
+2. Assigning the values to each of the object's keys, using the assignment operator, =
+
+- here's a table object:
+var table = {
+    legs: 3,
+    color: "brown",
+    priceUSD: 100,
+}
+//To access the table object, I can simply console log the entire object://  console.log(table);//display the object in the developer console
+//The returned value is the entire table object://  {legs: 3, color: 'brown', priceUSD: 100} 
+
+------------------------------------------------------------------------------------------------------------------------------
+Arrays: []
+In JS Arrays are objects
+That means that arrays also have some built-in properties and methods.
+One of the most commonly used built-in methods on arrays are the push() and the pop() methods.
+To add new items to an array, I can use the push() method: var fruits = [];
+fruits.push("apple"); // ['apple']
+fruits.push('pear'); // ['apple', 'pear']
+
+To remove the last item from an array, I can use the pop() method:  fruits.pop();
+console.log(fruits); // ['apple']
+
+
+Arrays+function:
+function arrayBuilder(one, two, three) {
+    var arr = [];
+    arr.push(one);
+    arr.push(two);
+    arr.push(three);
+    console.log(arr);
+}
+Call: arrayBuilder('apple', 'pear', 'plum'); // ['apple', 'pear', 'plum']
+
+Update:
+function arrayBuilder(one, two, three) {
+    var arr = [];
+    arr.push(one);
+    arr.push(two);
+    arr.push(three);
+    return arr;
+}
+var simpleArr = arrayBuilder('apple', 'pear', 'plum');
+console.log(simpleArr); // ['apple','pear','plum']
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Math objects cheat sheet:
+built-in objects
+
+.Number constants
+Here are some of the built-in number constants that exist on the Math object: 
+The PI number: Math.PI which is approximately 3.14159
+The Euler's constant: Math.E which is approximately 2.718
+The natural logarithm of 2: Math.LN2 which is approximately 0.693
+
+.Rounding methods
+These include: 
+ Math.ceil() - rounds up to the closest integer 
+ Math.floor() - rounds down to the closest integer 
+ Math.round() - rounds up to the closest integer if the decimal is .5 or above; otherwise, rounds down to the closest integer 
+ Math.trunc() - trims the decimal, leaving only the integer
+
+.Arithmetic and calculus methods
+Here is a non-conclusive list of some common arithmetic and calculus methods that exist on the Math object: 
+Math.pow(2,3) - calculates the number 2 to the power of 3, the result is 8 
+Math.sqrt(16) - calculates the square root of 16, the result is 4 
+Math.cbrt(8) - finds the cube root of 8, the result is 2 
+Math.abs(-10) - returns the absolute value, the result is 10 
+
+.Logarithmic methods: Math.log(), Math.log2(), Math.log10() 
+Return the minimum and maximum values of all the inputs: Math.min(9,8,7) returns 7, Math.max(9,8,7) returns 9.
+
+ .Trigonometric methods: Math.sin(), Math.cos(), Math.tan(), etc.
+
+
+
+
+
