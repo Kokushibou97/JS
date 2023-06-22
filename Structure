@@ -231,6 +231,14 @@ Or data inside two apostrophes.
 let text = "I'm learning programming";
 let length = text.length;
 
+cheat sheet:
+charAt() 
+concat() 
+indexOf() 
+lastIndexOf() 
+split() 
+toUpperCase() 
+toLowerCase()
 -----------------------------------------------------------------------------------------------------------------------
 BOOLEANS:
 true or false data type
