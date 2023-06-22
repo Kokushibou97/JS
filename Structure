@@ -1,0 +1,390 @@
+// this is a comment!
+
+/*
+this
+is
+a
+multi-line
+comment
+*/
+
+
+/* this is a multi-line comment on a single line */
+
+
+
+console.log("%cHello, World", "color: blue; font-size: 40px");
+--------------------------------------------------------------------------------------------------------------------------
+OPERATORS:
+1.Logical AND operator: &&     
+ example: Let's say you're tasked with coming up with some code that will check if the currentTime variable is between 9 a.m. and 5 p.m. The code needs to console.log true if currentTime > 9 and if currentTime < 17.
+ code: console.log(currentTime > 9 && currentTime < 17);
+ logic:
+ The && logical operator returns a single value: the boolean true or false, based on the following rules: 
+
+It returns true if both the values on its right and on its left are evaluated to true 
+
+It returns false in all the other instances
+
+In other words: 
+
+console.log(true && true) will output: true 
+console.log(true && false) will output: false 
+console.log(false && true) will output: false 
+console.log(false && false) will output: false
+
+-Using the logical && operator
+You are coding an RPG game, where each character has certain skill levels based on the value saved in their score.
+Create a variable named  score and set it to  8
+Use console.log() that includes the string "Mid-level skills:" and compares the score variable to above 0 and below 10 using the && operator
+The expected output in the console should be: "Mid-level skills: true".
+var score = 8;
+console.log("Mid-level skills:", score > 0 && score < 10)
+
+
+
+
+2.Logical OR operator: ||
+example: Consider the following task: You need to write a program in JavaScript which will return true if the value of the currentTime variable is not between 9 and 17. Put differently, your code needs to console.log true if the value of the variable currentTime is either less than 9 or greater than 17.
+code: var currentTime = 7;
+console.log(currentTime < 9 || currentTime > 17);
+logic:
+console.log(true || true) will output: true 
+console.log(true || false) will output: true  
+console.log(false || true) will output: true  
+console.log(false || false) will output: false
+
+-Using the logical || operator
+Imagine you are coding a video game. Currently, you’re about to code some snippets related to the game over condition.
+You need to code a new variable named timeRemaining and set it to 0. You also need to code a new variable named energy and set it to 10.
+Next, you should write a piece of code that could be used to determine if the game is over, based on whether either the value of the timeRemaining variable is 0 or the value of the energy variable is 0.
+Complete the task using the following steps:
+Declare the variable timeRemaining, and assign the value of 0 to it.
+Declare the variable energy, and assign the value of 10 to it.
+Console log the following parameters: "Game over: ", and timeRemaining == 0 || energy == 0
+Note that the expected output in the console should be: "Game over: true".
+var timeRemaining = 0;
+var energy = 10;
+console.log("Game over:", timeRemaining == 0 || energy == 0);
+
+
+
+
+3.Logical NOT operator: ! 
+In JavaScript, the logical NOT operator's symbol is the exclamation mark: !.
+The ! operator as a switch, which flips the evaluated boolean value from true to false and from false to true.
+
+For example: the boolean value of true to the petHungry variable: 
+var petHungry = true;
+then console log the fact that the pet is no longer hungry by using the ! operator to flip the boolean value stored inside of the petHungry variable, like so:
+console.log('Feeding the pet');
+console.log("Pet is hungry: ", !petHungry);
+console.log(petHungry);
+output code:
+Pet is hungry: true
+Feeding the pet
+Pet is hungry: false
+true
+
+
+
+
+4.The modulus operator: % 
+division
+console.log(22 % 5);
+
+-Using the modulus operator, %, to test if a given number is odd
+You need to code a small program that takes a number and determines if it's an even number (like 2, 4, 6, 8, 10).
+To achieve this task, you need to declare six variables, as follows:
+The first variable, named num1,  should be assigned a number value of 2.
+The second variable, named num2, should be assigned a number value of 5.
+The third variable, named test1, should be assigned the calculation of num1 % 2. Note: executing this code will return a number.
+The fourth variable, named test2, should be assigned the calculation of num2 % 2. Note: executing this code will also return a number.
+The fifth variable, named result1, should be assigned the result of comparing if the number stored in the test1 variable is not equal to 0, in other words, this: test1 == 0.
+The sixth variable, named result2, should be assigned the result of comparing if the number stored in the test2 variable is not equal to 0, in other words, test2 == 0.
+Run console log two times after you've set the variables:
+The first console log should have the following code between parentheses: "Is", num1, "an even number?", result1
+The second console log should have the following code between parentheses: "Is", num2, "an even number?", result2
+Note: The output to the console should be as follows:
+Is 2 an even number? true
+Is 5 an even number? false
+var num1 = 2;
+var num2 = 5;
+var test1 = num1 % 2;
+var test2 = num2 % 2;
+var result1 = test1 == 0;
+var result2 = test2 == 0;
+console.log("Is", num1, "an even number?", result1);
+console.log("Is", num2, "an even number?", result2);
+
+
+
+
+5.The equality operator: ==
+The equality operator checks if two values are equal.
+For example, this comparison returns true: 5 == 5. Indeed, it is true that 5 is equal to 5.
+Here's an example of the equality operator returning false:  5 == 6. Indeed, it is true that 5 is not equal to 6.
+Additionally, even if one of the compared values is of the number type, and the other is of the string type, the returned value is still true: 5 == "5". 
+This means that the equality operator compares only the values, but not the types.
+
+
+6.The strict equality operator: ===
+The strict equality operator compares for both the values and the data types.
+With the strict equality operator, comparing 5 === 5 still returns true. The values on each side of the strict equality operator have the same value and the same type. 
+However, comparing 5 == "5" now returns false, because the values are equal, but the data type is different.
+
+
+7.The inequality operator: !=
+The inequality operator checks if two values are not the same, but it does not check against the difference in types.
+For example, 5 != "5" returns false, because it's false to claim that the number 5 is not equal to number 5, even though this other number is of the string data type.
+
+
+
+8.The strict inequality operator: !==
+For the strict inequality operator to return false, the compared values have to have the same value and the same data type. 
+For example,  5 !== 5 returns false because it is false to say that the number 5 is not of the same value and data type and another number 5.
+However, comparing the number 5 and the string 5, using the strict inequality operator, returns true.
+
+
+9.The addition assignment operator: +=
+Combining two strings using the + operator
+The + operator, when used with number data type, adds those values together.
+However, the + operator is also used to join string data type together.
+For example: "inter" + "net" // "internet"
+"note" + "book" // "notebook"
+
+
+If the + operator is used to join strings, then it is referred to as the concatenation operator, and you'll say that it's used to concatenate strings.
+When used with numbers, the + operator is the addition operator, and when used with strings, the + operator is the concatenation operator.
+Combining strings and numbers using the + operator
+But what happens when one combines a string and a number using the + operator?
+
+Here's an example: 365 + " days" // "365 days"
+12 + " months" // "12 months"
+
+Here, JavaScript tries to help by converting the numbers to strings, and then concatenating the number and the string together, ending up with a string value.
+The process of this "under-the-hood" conversion of values in JavaScript is referred to as "coercion". JavaScript coerces a number value to a string value - so that it can run the + operator on disparate data types.
+The process of coercion can sometimes be a bit unexpected.
+Consider the following example:
+1 + "2"
+What will be the result of 1 + "2"?
+Note that the value of 1 is of the number data type, and the value of "2" is of the string data type, and so JavaScript will coerce the number 1 to a string of "1", and then concatenate it with the string of "2", so the result is a string of "12".
+
+
+
+
+10.The concatenation assignment operator: += (it's the same as the previous one - more on that later):
+The addition assignment operator is used when one wants to accumulate the values stored in a variable.
+Here's an example: You are counting the number of overtime hours worked in a week.
+You don't have to specify the type of work, you just want to count total hours.
+You might code a program to track it, like this:
+var mon = 1;
+var tue = 2;
+var wed = 1;
+var thu = 2;
+var fri = 3;
+console.log(mon + tue + wed + thu + fri); // 9
+
+You can simplify the above code by using the addition assignment operator, as follows:
+var overtime = 1;
+overtime += 2;
+overtime += 1;
+overtime += 2;
+overtime += 3;
+console.log(overtime); // 9
+
+
+11.The concatenation assignment operator, +=
+var longString = "";
+longString += "Once";
+longString += " upon";
+longString += " a";
+longString += " time";
+longString += "...";
+console.log(longString); // "Once upon a time..."
+
+OPERATOR PRECEDENCE AND ASSOCIATIVITY:
+Operator precedence is a set of rules that determines which operator should be evaluated first.
+EXAMPLE:
+1 * 2 + 3
+The result of the above code is 5, because the multiplication operator has precedence over the addition operator.
+Operator associativity determines how the precedence works when the code uses operators with the same precedence.
+There are two kinds: 
+left-to-right associativity
+right-to-left associativity
+For example, the assignment operator is right-to-left associative, while the greater than operator is left-to-right associative:
+var num = 10; // the value on the right is assigned to the variable name on the left
+5 > 4 > 3; // the 5 > 4 is evaluated first (to `true`), then true > 3 is evaluated to `false`, because the `true` value is coerced to `1`
+--------------------------------------------------------------------------------------------------------------------------
+VARIABLES:
+
+Variables= var
+
+example: 
+var petCat = 'Pepper'; (declaring a variable and giving it a name).
+var catSound = "meow"; 
+console.log(petCat, "now says", catSound); (console.log a variable).
+
+-------------------------------------------------------------------------------------------------------------------------
+STRINGS:
+Or data inside two apostrophes.
+let text = "I'm learning programming";
+let length = text.length;
+
+-----------------------------------------------------------------------------------------------------------------------
+BOOLEANS:
+true or false data type
+
+------------------------------------------------------------------------------------------------------------------------
+CONDTIONALS:
+If-else  Switch-case-break
+This is why they are sometimes referred to as flow control statements. In other words, they control the flow of execution of your code, so that some code can be skipped, while other code can be executed.
+
+e1-if(light == "green") {
+    console.log("Drive")
+} else if (light == "orange") {
+    console.log("Get ready")
+} else if (light == "red") {
+    console.log("Dont' drive")
+} else {
+    //this block will run if no condition matches
+    console.log("The car is not green, orange, or red");
+}
+
+e1-var age = 10;
+if (age >= 65) {
+   console.log('You get your income from your pension')
+} else if (age < 65 && age >= 18) {
+   console.log('Each month you get a salary')
+} else if (age < 18) {
+   console.log('You get an allowance')
+} else {
+   //this block will run if no condition matches
+   console.log('The value of the age variable is not numerical')
+}
+
+
+
+e1-switch(light) {
+   case 'green':
+       console.log("Drive");
+       break;
+   case 'orange':
+       console.log("Get ready");
+       break;
+   case 'red':
+       console.log("Don't drive");
+       break;
+   default:
+       //this block will run if no condition matches
+       console.log('The light is not green, orange, or red');
+       break;
+}
+
+e2-var day = `Sunday`;
+switch(day) {
+   case 'Monday':
+       console.log('Read a book');
+       break;
+   case 'Tuesday':
+       console.log('Watch a movie');
+       break;
+   case 'Wednesday':
+       console.log('Read a book');
+       break;
+   case 'Thursday':
+       console.log('Play basketball');
+       break;
+   case 'Friday':
+       console.log('Socialize');
+       break;
+   case 'Saturday':
+       console.log('Chill');
+       break;
+   case 'Sunday':
+       console.log('Have barbecue');
+       break;
+   default:
+       //this block will run if no condition matches
+       console.log('There is no such day');
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------
+LOOPS:
+for:
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log('Counting completed!')
+
+while:
+console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log('Counting completed!')
+
+for+while:
+for (var i = 1; i <= 5; i++) {
+    console.log(i);
+};
+console.log('Counting completed!');
+
+
+for (var i = 5; i > 0; i--) {
+    console.log(i);
+};
+console.log('Countdown finished!');
+
+
+nested loops:
+//single loop
+for (var secondNum = 0; secondNum < 10; secondNum++) {
+    console.log(secondNum);
+}
+//nested loops - one inside another
+for (var firstNum = 0; firstNum < 2; firstNum++) {
+    for (var secondNum = 0; secondNum < 10; secondNum++) {
+        console.log(firstNum + ", " + secondNum);
+    }
+}
+
+//nested loops - one inside another
+for (var firstNum = 0; firstNum < 2; firstNum++) {
+    for (var secondNum = 0; secondNum < 10; secondNum++) {
+        console.log(firstNum + " times " + secondNum + " equals " + firstNum * secondNum);
+    }
+}
+
+//nested loops - one inside another 
+for (var i = 100; i > 10; i = i - 10) {
+    for (var j = 10; j > 4; j = j - 5) {
+        console.log(i + " divided by " + j + " equals " + i / j);
+    }
+}
+
+Loops+i++
+or (var i = 1; i <= 10; i++) {
+    switch(i) {
+        case 1:
+            console.log("Gold medal")
+            break
+        case 2:
+            console.log("Silver medal")
+            break
+        case 3:
+            console.log("Bronze medal")
+            break
+        default:
+            //this block will run if no condition matches
+            console.log(i)
+    }
+}
+
+
+
+
