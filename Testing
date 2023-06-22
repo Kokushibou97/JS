@@ -1,0 +1,86 @@
+The following JavaScript Testing Frameworks are helpful for unit testing in JavaScript. They are as follows:
+1. Unit.js
+An assertion library for Javascript runs on Node.js and the browser. It works with any test runner and unit testing framework like Mocha, Jasmine, Karma, protractor (E2E test framework for Angular apps), QUnit, etc.
+
+2. Mocha
+Mocha is a test framework running both in Node.js and in the browser. This framework makes asynchronous testing simple by running tests serially. 
+Mocha tests run serially, allowing for flexible and accurate reporting while mapping uncaught exceptions to the correct test case. 
+It provides support for all browsers, including the headless Chrome library and is convenient for the developers to write test cases
+
+3. Jest
+It is an open-source testing framework built on JavaScript, designed majorly to work with React and React Native-based web applications. Often, unit tests are not very useful when run on the front end of any software. 
+This is mostly because unit tests for the front end require extensive, time-consuming configuration. This complexity can be reduced to a great extent with the Jest framework.
+
+4. Jasmine
+Jasmine is a popular JavaScript behavior-driven development framework for unit testing JavaScript applications. 
+It provides utilities that run automated tests for both synchronous and asynchronous code. It is also highly beneficial for front-end testing.
+
+5. Karma
+Karma is a node-based test tool allowing you to test your JavaScript codes across multiple browsers. It makes test-driven development fast, fun, and easy and is termed as a test-runner technically. 
+
+6. Cypress
+Cypress framework is a JavaScript-based end-to-end testing framework built on top of Mocha – a feature-rich JavaScript test framework running on and in the browser, making asynchronous testing simple and convenient Unit tests in Cypress are executed without even having to run a web server. 
+That makes Cypress the ideal tool for testing a JS/TS library meant to be used in the browser.
+
+7. NightwatchJS
+Nightwatch.js framework is a Selenium-based test automation framework written in Node.js and uses the W3C WebDriver API (formerly Selenium WebDriver).  
+It communicates over a restful HTTP API with a WebDriver server (such as ChromeDriver or Selenium Server). The protocol is defined by the W3C WebDriver spec, which is derived from the JSON Wire protocol.
+
+It is a complete end-to-end testing solution that aims to simplify writing automated tests.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  JEST:
+  
+Here, we’ll be using the Jest tool and testing framework. This tool is one of the de-facto testing tools available, popular because of its ease of use and different testing functionalities. 
+If you are unaware of the Jest configuration, pause here, read this Jest Framework tutorial, and resume with the next steps.
+
+Prerequisites for writing a test case:
+
+Below are some of the libraries and packages required to be installed on the system to run Jest test scripts.
+
+NodeJS and Node Package Manager (npm): NodeJS can be installed using the npm manager or directly using the Windows Installer binary from the nodejs.org website here.
+Jest Configuration
+Suitable Browser Driver
+Now, consider a simple implementation. Here, let’s write a simple pseudo-code for a unit test case. Let’s take a scenario wherein you want to convert the word about-us from English to French in lowercase. 
+The functionality below helps you do the same. Similarly, you can modify the code for multiple other languages as well. 
+
+const englishCode = "en-UK";
+const frenchCode = "es-FS";
+function getAboutUsLink(language){
+    switch (language.toLowerCase()){
+      case englishCode.toLowerCase():
+        return '/about-us';
+      case frenchCode.toLowerCase():
+        return '/-à propos de nous';
+    }
+    return '';
+}
+module.exports = getAboutUsLink;
+Now, let’s put it into the index.js file. Let’s write tests in the same file, but as a good practice, it is better to write separate unit tests into a dedicated file.The common naming patterns include
+{filename}.test.js and {filename}.spec.js. This example uses index.test.js:
+const getAboutUsLink = require("./index");
+test("Return about-us for english language", () => {
+    expect(getAboutUsLink("en-UK")).toBe("/about-us");
+});
+
+
+Now import the function to be tested. Every test here is defined as an invocation of the test function. The first parameter is the name of the test. 
+In this case, we call the getAboutUsLink function with en-UK as the language parameter. We expect the result to be /about-us.
+Now, invoke the Jest CLI globally and run the test:
+npm i jest-cli -g
+Jest
+f you get a configuration-related error, make sure you have your package.json file present. In case you don’t, generate one using npm init.
+Your output goes like this:
+PASS  ./index.test.js
+  √ Returns about-us for english language (4ms)
+  console.log index.js:10
+    /about-us
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        2.111s
+
+
+
